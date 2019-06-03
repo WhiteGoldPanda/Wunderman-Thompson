@@ -5,18 +5,23 @@ import { About } from "./Components/About";
 import { Contacts } from "./Components/Contacts";
 import { PageError } from "./Components/PageError";
 
+import { Layout } from "./Components/Stylecom/Layout";
+import { NaviBar } from "./Components/NaviBar";
 class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <Router>
-          <Switch>
-            <Route exact path="/" component={Main} />
-            <Route path="/about" component={About} />
-            <Route path="/contacts" component={Contacts} />
-            <Route component={PageError} />
-          </Switch>
-        </Router>
+        <NaviBar />
+        <Layout>
+          <Router>
+            <Switch>
+              <Route exact path="/" component={Main} />
+              <Route path="/about" component={About} />
+              <Route path="/contacts" component={Contacts} />
+              <Route component={PageError} />
+            </Switch>
+          </Router>
+        </Layout>
       </React.Fragment>
     );
   }
