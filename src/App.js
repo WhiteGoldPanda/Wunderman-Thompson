@@ -7,11 +7,14 @@ import { PageError } from "./Components/PageError";
 
 import { Layout } from "./Components/Stylecom/Layout";
 import { NaviBar } from "./Components/NaviBar";
+import { Jumbotron } from "./Components/Stylecom/Jumbotron";
+
 class App extends Component {
   render() {
     return (
       <React.Fragment>
         <NaviBar />
+        <Jumbotron />
         <Layout>
           <Router>
             <Switch>
