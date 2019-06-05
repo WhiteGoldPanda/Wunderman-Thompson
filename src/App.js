@@ -8,7 +8,6 @@ import { PageError } from "./Components/PageError";
 import { Layout } from "./Components/Stylecom/Layout";
 import { NaviBar } from "./Components/NaviBar";
 import { Jumbotron } from "./Components/Stylecom/Jumbotron";
-import { Dropdow } from "./Components/Stylecom/dropDown";
 
 class App extends Component {
   render() {
