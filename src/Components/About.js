@@ -1,13 +1,16 @@
 import React from "react";
-
+import { Dropdow } from "./Stylecom/dropDown";
 class About extends React.Component {
   getUsers() {
-    fetch("https://api.github.com/users/KrunalLathiya")
-      .then(response => response.json())
-      .then(data => {
-        console.log(data); // Prints result from `response.json()` in getRequest
+    fetch("https://jsonplaceholder.typicode.com/404")
+      .then(res => {
+        if (res.ok) {
+          return res;
+        } else {
+          throw Error(`Request rejected with status ${res.status}`);
+        }
       })
-      .catch(error => console.error(error));
+      .catch(console.error);
   }
   render() {
     return (
@@ -15,10 +18,9 @@ class About extends React.Component {
         <h1>Hello ther</h1>
         <p>hfmbergnoenoe</p>
         <p>hfmbergnoenoe</p>
-        <p>
-          hfmbergnoenohfmbergnoenoehfmbergnoenoehfmbergnoenoehfmbergnoenoehfmbergnoenoehfmbergnoenoehfmbergnoenoehfmbergnoenoehfmbergnoenoehfmbergnoenoehfmbergnoenoehfmbergnoenoehfmbergnoenoehfmbergnoenoehfmbergnoenoehfmbergnoenoehfmbergnoenoehfmbergnoenoehfmbergnoenoehfmbergnoenoehfmbergnoenoehfmbergnoenoehfmbergnoenoehfmbergnoenoehfmbergnoenoehfmbergnoenoehfmbergnoenoehfmbergnoenoehfmbergnoenoehfmbergnoenoehfmbergnoenoee
-        </p>
+        <p>adasa</p>
         <p>hfmbergnoenoe</p>
+        <Dropdow />
       </div>
     );
   }
