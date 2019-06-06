@@ -39,7 +39,7 @@ class DataApi extends React.Component {
             users.map(user => {
               const { username, name, email } = user;
               return (
-                <Container>
+                <Container key={user.id}>
                   <Form>
                     <Form.Group
                       controlId="exampleForm.ControlSelect1"
